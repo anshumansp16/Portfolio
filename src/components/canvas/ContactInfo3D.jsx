@@ -93,7 +93,7 @@ const ContactInfo3D = () => {
           rotation={[0, 0, 0]}
           scale={[1.5, 1, 1]}
           label="YouTube"
-          link="https://www.youtube.com/@thepixelizesolution"
+          link="https://www.youtube.com/@anshumansp16"
           color="#FF0000"
         />
       </Float>

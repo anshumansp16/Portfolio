@@ -67,7 +67,7 @@ const Navbar = () => {
         {/* Social Media Icons (Desktop) */}
         <div className="hidden sm:flex items-center gap-4">
           <a
-            href="https://github.com/anshumansp/"
+            href="https://github.com/anshumansp16/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white hover:text-[#c026d3] transition-colors duration-300"
@@ -83,7 +83,7 @@ const Navbar = () => {
             <FaLinkedin size={22} />
           </a>
           <a
-            href="https://www.youtube.com/@thepixelizesolution"
+            href="https://www.youtube.com/@anshumansp16"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white hover:text-red-500 transition-colors duration-300"
@@ -125,7 +125,7 @@ const Navbar = () => {
               {/* Social Icons (Mobile) */}
               <div className="flex gap-4 mt-2">
                 <a
-                  href="https://github.com/anshumansp/"
+                  href="https://github.com/anshumansp16/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white hover:text-[#c026d3] transition-colors duration-300"
@@ -141,7 +141,7 @@ const Navbar = () => {
                   <FaLinkedin size={18} />
                 </a>
                 <a
-                  href="https://www.youtube.com/@thepixelizesolution"
+                  href="https://www.youtube.com/@anshumansp16"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white hover:text-red-500 transition-colors duration-300"

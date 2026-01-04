@@ -13,23 +13,10 @@ import {
   nodejs,
   mongodb,
   git,
-  figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  snugstaff,
-  corsrex,
-  listnote,
-  newswave,
-  urbanly,
-  corsrexv1,
-  textutils,
   computer,
   threejs,
   sazagLogo,
-  newITLogo,
   freelanceLogo,
 } from "../assets";
 
@@ -37,9 +24,6 @@ import {
 import crownkingImg from "../assets/crownking.png";
 import kiarosImg from "../assets/kiaros.png";
 import pixelizeImg from "../assets/pixelize.png";
-import physioImg from "../assets/physio.png";
-import chatbotImg from "../assets/chatbot.png";
-import vibesImg from "../assets/vibes.png";
 
 // Import testimonial images
 import prameyaImg from "../assets/prameya.jpeg";
@@ -52,7 +36,7 @@ export const navLinks = [
   },
   {
     id: "work",
-    title: "Work",
+    title: "Projects",
   },
   {
     id: "contact",
@@ -132,47 +116,40 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Full Stack Web Developer",
+    title: "Senior Full Stack Developer",
+    company_name: "Thunder Marketing Corporation",
+    icon: sazagLogo, // You may need to add Thunder Marketing logo later
+    iconBg: "#383E56",
+    date: "April 2025 - Present",
+    points: [
+      "Architected enterprise-scale browser automation platform using Selenium & Playwright, processing 50K+ automated tasks daily with 99.9% reliability.",
+      "Built production FastAPI microservices architecture handling 10K+ concurrent requests; reduced API response time by 40% through optimization.",
+      "Engineered AI-powered automation systems integrating GPT-4, Claude, and custom LLMs for intelligent decision-making; achieved 85% accuracy in task routing.",
+      "Developed Next.js dashboards with real-time monitoring; implemented CI/CD pipelines reducing deployment time by 60% and improving system reliability by 85%.",
+    ],
+  },
+  {
+    title: "AI Engineer",
     company_name: "Sazag Infotech Private Limited",
     icon: sazagLogo,
-    iconBg: "#383E56",
-    date: "April 2024 - Present",
-    points: [
-      "Built AI-powered RAG systems for 40% better information retrieval accuracy.",
-      "Optimized vector databases, reducing query response times by 35%.",
-      "Created AI tools and automation frameworks, saving 15+ hours weekly.",
-      "Developed backend solutions with Nest.js, Python, and cloud integrations.",
-      "Designed 3D visualizations with Three.js, increasing user engagement by 28%.",
-      "Implemented Docker for consistent application delivery across environments.",
-      "Led testing strategies that reduced post-deployment issues by 65%.",
-    ],
-  },
-  {
-    title: "Frontend Web Developer",
-    company_name: "New IT Nest Limited",
-    icon: newITLogo,
     iconBg: "#E6DEDD",
-    date: "September 2023 - March 2024",
+    date: "April 2024 - March 2025",
     points: [
-      "Delivered 5+ web solutions with focus on UX design and accessibility.",
-      "Integrated APIs for client-side functionality, improving data sync by 42%.",
-      "Migrated legacy apps to cloud platforms with 99.9% uptime.",
-      "Optimized performance through code refactoring, reducing load times by 30%.",
-      "Implemented responsive design for seamless cross-device experiences.",
+      "Designed production-grade RAG systems and agentic AI architectures for enterprise clients; improved query accuracy by 40% through vector database optimization.",
+      "Built Chrome extensions and browser automation tools generating 30% cost savings; containerized applications using Docker/Kubernetes for seamless scaling.",
+      "Developed scalable Python FastAPI backends integrated with AWS/GCP; implemented CI/CD pipelines achieving 99.5% deployment success rate.",
     ],
   },
   {
-    title: "Freelance Frontend Developer",
-    company_name: "Freelance",
+    title: "Full Stack Developer",
+    company_name: "Freelance & Contract Work",
     icon: freelanceLogo,
     iconBg: "#383E56",
-    date: "August 2022 - August 2023",
+    date: "August 2022 - March 2024",
     points: [
-      "Built 10+ web solutions with 4.8/5 client satisfaction ratings.",
-      "Implemented advanced APIs for e-commerce and service businesses.",
-      "Enhanced cloud platform performance for 5 small business clients.",
-      "Developed dynamic web apps using React.js and Next.js.",
-      "Provided continuous technical support and feature implementations.",
+      "Delivered 25+ production web applications using React.js, Next.js, and modern frontend frameworks; maintained 99% client satisfaction rating.",
+      "Migrated 15+ legacy applications to AWS cloud infrastructure; achieved 50% cost reduction and 95+ Google PageSpeed scores through optimization.",
+      "Integrated RESTful APIs, payment gateways, and authentication systems; mentored 3 junior developers improving team code quality by 40%.",
     ],
   },
 ];
@@ -214,9 +191,75 @@ const testimonials = [
 
 const projects = [
   {
+    name: "Aarambh",
+    description:
+      "A comprehensive platform for startup founders and entrepreneurs, providing tools and resources to launch and grow their businesses. Features include pitch deck builder, business plan templates, and investor connections.",
+    tags: [
+      {
+        name: "nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "typescript",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: crownkingImg, // Placeholder - you may need to add actual image
+    webpage_link: "https://aarambh.anshumansp.com",
+    source_code_link: "https://github.com/anshumansp16/Aarambh",
+  },
+  {
+    name: "TATVA",
+    description:
+      "An AI-powered wellness and meditation platform that helps users achieve mental clarity and balance. Includes guided meditation sessions, personalized wellness plans, and progress tracking with modern AI integration.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "ai",
+        color: "green-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: kiarosImg, // Placeholder - you may need to add actual image
+    webpage_link: "https://tatva.anshumansp.com",
+    source_code_link: "https://github.com/anshumansp16/TATVA",
+  },
+  {
+    name: "ResumePro",
+    description:
+      "Professional resume builder with AI-powered content suggestions and ATS optimization. Create stunning resumes with multiple templates, real-time preview, and export to PDF. Includes cover letter generator and LinkedIn profile optimization.",
+    tags: [
+      {
+        name: "nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "ai",
+        color: "green-text-gradient",
+      },
+      {
+        name: "postgres",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: pixelizeImg, // Placeholder - you may need to add actual image
+    webpage_link: "https://resume.anshumansp.com",
+    source_code_link: "https://github.com/anshumansp16/ResumePro",
+  },
+  {
     name: "CrownKing",
     description:
-      "CrownKing is a full-stack e-commerce platform specializing in premium men's jewelry. The application offers a seamless shopping experience with a sleek, modern interface for customers to browse and purchase high-quality jewelry items.",
+      "Full-stack e-commerce platform specializing in premium men's jewelry. Features include seamless shopping experience, secure payment integration, order tracking, and admin dashboard for inventory management.",
     tags: [
       {
         name: "react",
@@ -232,14 +275,14 @@ const projects = [
       },
     ],
     image: crownkingImg,
-    webpage_link: "https://crownking.vercel.app/",
+    webpage_link: "https://crownking.anshumansp.com",
     source_code_link:
-      "https://github.com/anshumansp/CrownKing-Premium-Men-s-Jewellery-",
+      "https://github.com/anshumansp16/CrownKing-Premium-Men-s-Jewellery-",
   },
   {
     name: "Kiaros",
     description:
-      "A comprehensive suite of productivity tools designed for professionals to streamline their workflow and boost efficiency. Includes PDF tools, image conversion, resume builder and more with modern, responsive UI.",
+      "Comprehensive suite of productivity tools for professionals including PDF converter, image optimizer, resume builder, and more. Built with performance and user experience in mind with modern responsive UI.",
     tags: [
       {
         name: "nextjs",
@@ -256,183 +299,7 @@ const projects = [
     ],
     image: kiarosImg,
     webpage_link: "https://kiaros.vercel.app/",
-    source_code_link: "https://github.com/anshumansp/Kiaros-Tools",
-  },
-  {
-    name: "Pixelize",
-    description:
-      "Pixelize is a modern and stylish digital agency Page. Designed for creative designers, agencies, freelancers, and photographers with responsive design and features typically found only in premium templates.",
-    tags: [
-      {
-        name: "html",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "css",
-        color: "green-text-gradient",
-      },
-      {
-        name: "javascript",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: pixelizeImg,
-    webpage_link: "https://pixelizesolution.com",
-    source_code_link: "https://github.com/anshumansp/Pixelize",
-  },
-  {
-    name: "PhysioAI",
-    description:
-      "PhysioCare is a cutting-edge, AI-powered web application designed to streamline client management and enhance customer support for physiotherapists, leveraging modern AI tools for a seamless experience.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "ai",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: physioImg,
-    webpage_link: "https://physio-care.vercel.app/",
-    source_code_link: "https://github.com/anshumansp/PhysioCare",
-  },
-  {
-    name: "Consultix",
-    description:
-      "An AI-powered business consultant using Deepseek Chat model, offering real-time expertise in strategy, tech, and management for business strategy, market analysis, and project management.",
-    tags: [
-      {
-        name: "ai",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "react",
-        color: "green-text-gradient",
-      },
-      {
-        name: "node",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: chatbotImg,
-    webpage_link: "https://consultix.netlify.app/",
-    source_code_link: "https://github.com/anshumansp/Business_Consultant_Agent",
-  },
-  {
-    name: "Vibes",
-    description:
-      "React app for messaging using socket io for real-time communication between users.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "socketio",
-        color: "green-text-gradient",
-      },
-      {
-        name: "node",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: vibesImg,
-    webpage_link: "https://vibechats.vercel.app",
-    source_code_link: "https://github.com/anshumansp/Vibe-Chat",
-  },
-  {
-    name: "Corsrex",
-    description:
-      "A course-selling web app, which lets users purchase various courses, and it evolved to a complete web app with Express, MongoDB, and Node.js integration.",
-    tags: [
-      {
-        name: "javascript",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "nodejs",
-        color: "green-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: corsrex,
-    webpage_link: "https://corsrex.netlify.app",
-    source_code_link: "https://github.com/anshumansp/Corsrex",
-  },
-  {
-    name: "Urbanly",
-    description:
-      "Urbanly is a real-estate web application made using React and pure CSS3. It seamlessly caters to clients' creative needs, having full responsiveness for an exceptional user experience.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "css3",
-        color: "green-text-gradient",
-      },
-      {
-        name: "jsx",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: urbanly,
-    webpage_link: "https://urbanly.netlify.app/",
-    source_code_link: "https://github.com/anshumansp/Urbanly",
-  },
-  {
-    name: "NewsWave",
-    description:
-      "Newswave is a news application powered by News API, showcasing latest news on various categories. Although it's only available for localhost, but it have a sleek UI, with modern features like infinite scroll and more.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "green-text-gradient",
-      },
-      {
-        name: "git",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: newswave,
-    webpage_link: "https://github.com/anshumansp/NewsWave-React",
-    source_code_link: "https://github.com/anshumansp/NewsWave-React",
-  },
-  {
-    name: "Corsrex 1.0",
-    description:
-      "It was the initial version of that same course selling app listed above, which lets users purchase various courses. It is just a single page website, yet pretty much interactive.",
-    tags: [
-      {
-        name: "javascript",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "html5",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: corsrexv1,
-    webpage_link: "https://corsrex-v1.netlify.app/",
-    source_code_link: "https://github.com/anshumansp/trial-corsrex",
+    source_code_link: "https://github.com/anshumansp16/Kiaros-Tools",
   },
 ];
 

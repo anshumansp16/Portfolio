@@ -41,7 +41,7 @@ const ContentCreator = () => {
           className="text-center max-w-3xl"
         >
           <a
-            href="https://www.youtube.com/@thepixelizesolution"
+            href="https://www.youtube.com/@anshumansp16"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center bg-gradient-to-r from-[#1a1a2d] to-[#323250] text-white font-medium py-4 px-8 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20 transform hover:-translate-y-1 border border-purple-500/30"

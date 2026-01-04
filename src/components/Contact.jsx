@@ -1,43 +1,9 @@
 import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import { fadeIn, textVariant } from "../utils/motion";
 import { styles } from "../styles";
-import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 import emailjs from "@emailjs/browser";
-import {
-  FaGithub,
-  FaLinkedin,
-  FaEnvelope,
-  FaGlobe,
-  FaYoutube,
-} from "react-icons/fa";
-import { BsEnvelope, BsLinkedin, BsGithub, BsInstagram } from "react-icons/bs";
-import { MdEmail, MdPlace } from "react-icons/md";
-import ContactInfo3DCanvas from "./canvas/ContactInfo3D";
-
-const ContactInfoItem = ({ icon: Icon, label, value, link, color }) => (
-  <a
-    href={link}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex items-start gap-2 group"
-  >
-    <div
-      className="rounded-full w-10 h-10 flex items-center justify-center"
-      style={{ backgroundColor: color }}
-    >
-      <Icon className="text-white text-xl" />
-    </div>
-    <div>
-      <p className="text-secondary text-sm">{label}</p>
-      <p className="text-white font-medium group-hover:text-[#915eff] transition-colors duration-300">
-        {value}
-      </p>
-    </div>
-  </a>
-);
 
 const Contact = () => {
   const formRef = useRef();
@@ -91,60 +57,11 @@ const Contact = () => {
 
   return (
     <div className="flex flex-col gap-10">
-      {/* Contact Info Section */}
-      <div className="xl:flex-row flex-col flex gap-10 overflow-hidden">
-        <motion.div
-          variants={slideIn("left", "tween", 0.2, 1)}
-          className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
-        >
-          <p className={styles.sectionSubText}>Connect With Me</p>
-          <h3 className={styles.sectionHeadText}>My Details.</h3>
-
-          <div className="mt-8 flex flex-col gap-6">
-            <ContactInfoItem
-              icon={FaGithub}
-              label="GitHub"
-              value="@anshumansp"
-              link="https://github.com/anshumansp/"
-              color="#333333"
-            />
-            <ContactInfoItem
-              icon={FaLinkedin}
-              label="LinkedIn"
-              value="Anshuman Parmar"
-              link="https://www.linkedin.com/in/anshuman-parmar-757666219/"
-              color="#0077b5"
-            />
-            <ContactInfoItem
-              icon={FaEnvelope}
-              label="Email"
-              value="anshumansp16@gmail.com"
-              link="mailto:anshumansp16@gmail.com"
-              color="#4285F4"
-            />
-            <ContactInfoItem
-              icon={FaYoutube}
-              label="YouTube"
-              value="@thepixelizesolution"
-              link="https://www.youtube.com/@thepixelizesolution"
-              color="#FF0000"
-            />
-          </div>
-        </motion.div>
-
-        <motion.div
-          variants={slideIn("right", "tween", 0.2, 1)}
-          className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
-        >
-          <ContactInfo3DCanvas />
-        </motion.div>
-      </div>
-
       {/* Contact Form Section */}
-      <div className="xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
+      <div className="flex justify-center overflow-hidden">
         <motion.div
           variants={slideIn("left", "tween", 0.2, 1)}
-          className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
+          className="w-full max-w-3xl bg-black-100 p-8 rounded-2xl"
         >
           <p className={styles.sectionSubText}>Get in Touch</p>
           <h3 className={styles.sectionHeadText}>Contact.</h3>
@@ -195,13 +112,6 @@ const Contact = () => {
               {loading ? "Sending..." : "Send"}
             </button>
           </form>
-        </motion.div>
-
-        <motion.div
-          variants={slideIn("right", "tween", 0.2, 1)}
-          className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
-        >
-          <EarthCanvas />
         </motion.div>
       </div>
     </div>
