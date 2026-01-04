@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
-import { Inter, Lora, JetBrains_Mono } from 'next/font/google'
+import { Inter, Lora, JetBrains_Mono, Allura } from 'next/font/google'
 import '@/styles/globals.css'
 import { Navigation } from '@/components/layouts/Navigation'
 import { SmoothScroll } from '@/components/layouts/SmoothScroll'
+import { Footer } from '@/components/layouts/Footer'
 
 // Font configurations with display swap for optimal loading
 const inter = Inter({
@@ -24,6 +25,13 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
   variable: '--font-geist-mono',
   display: 'swap',
+})
+
+const allura = Allura({
+  subsets: ['latin'],
+  variable: '--font-signature',
+  display: 'swap',
+  weight: '400',
 })
 
 export const metadata: Metadata = {
@@ -75,12 +83,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${lora.variable} ${jetbrainsMono.variable}`}
+      className={`${inter.variable} ${lora.variable} ${jetbrainsMono.variable} ${allura.variable}`}
     >
       <body className="antialiased">
         <SmoothScroll />
         <Navigation />
         {children}
+        <Footer />
       </body>
     </html>
   )

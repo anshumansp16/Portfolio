@@ -259,7 +259,10 @@ function Navigation() {
                             href: "/",
                             className: "relative group",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].span, {
-                                className: "text-2xl font-display font-normal text-platinum transition-colors duration-200 group-hover:text-teal-brilliant",
+                                className: "text-2xl font-display italic text-platinum transition-colors duration-200 group-hover:text-accent-gold",
+                                style: {
+                                    fontFamily: 'var(--font-instrument-serif)'
+                                },
                                 whileHover: {
                                     scale: 1.02
                                 },
@@ -268,7 +271,7 @@ function Navigation() {
                                     stiffness: 400,
                                     damping: 10
                                 },
-                                children: "AP"
+                                children: "Anshuman"
                             }, void 0, false, {
                                 fileName: "[project]/rebuild-portfolio/portfolio/src/components/layouts/Navigation.tsx",
                                 lineNumber: 85,
@@ -285,12 +288,12 @@ function Navigation() {
                                     ...item
                                 }, item.href, false, {
                                     fileName: "[project]/rebuild-portfolio/portfolio/src/components/layouts/Navigation.tsx",
-                                    lineNumber: 97,
+                                    lineNumber: 98,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/rebuild-portfolio/portfolio/src/components/layouts/Navigation.tsx",
-                            lineNumber: 95,
+                            lineNumber: 96,
                             columnNumber: 11
                         }, this)
                     ]
@@ -305,7 +308,7 @@ function Navigation() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-                className: "absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-teal-brilliant to-transparent origin-left",
+                className: "absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent-gold to-transparent origin-left",
                 style: {
                     scaleX: (0, __TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$value$2f$use$2d$transform$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useTransform"])(scrollY, [
                         0,
@@ -317,7 +320,7 @@ function Navigation() {
                 }
             }, void 0, false, {
                 fileName: "[project]/rebuild-portfolio/portfolio/src/components/layouts/Navigation.tsx",
-                lineNumber: 104,
+                lineNumber: 105,
                 columnNumber: 7
             }, this)
         ]

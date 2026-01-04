@@ -83,11 +83,17 @@ export function Navigation() {
             className="relative group"
           >
             <motion.span
-              className="text-2xl font-display font-normal text-platinum transition-colors duration-200 group-hover:text-teal-brilliant"
+              className="text-platinum transition-colors duration-200 group-hover:text-accent-gold"
+              style={{
+                fontFamily: 'var(--font-signature)',
+                fontSize: '2.2rem',
+                fontWeight: 400,
+                letterSpacing: '0.02em',
+              }}
               whileHover={{ scale: 1.02 }}
               transition={{ type: 'spring', stiffness: 400, damping: 10 }}
             >
-              AP
+              Anshuman
             </motion.span>
           </Link>
 
@@ -102,7 +108,7 @@ export function Navigation() {
 
       {/* Scroll Progress Bar */}
       <motion.div
-        className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-teal-brilliant to-transparent origin-left"
+        className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent-gold to-transparent origin-left"
         style={{
           scaleX: useTransform(
             scrollY,

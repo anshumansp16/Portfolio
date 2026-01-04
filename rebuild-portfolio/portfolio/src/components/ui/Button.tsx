@@ -25,9 +25,9 @@ export function Button({
   const baseStyles = 'luxury-button relative inline-flex items-center justify-center font-medium tracking-wider transition-all duration-300 ease-luxury'
 
   const variants = {
-    primary: 'border-platinum text-platinum hover:border-teal-brilliant hover:text-noir-void',
+    primary: 'border-platinum text-platinum hover:border-accent-gold hover:text-noir-void',
     secondary: 'border-graphite text-silver hover:border-silver hover:text-platinum',
-    text: 'border-transparent text-platinum hover:text-teal-brilliant underline-offset-4',
+    text: 'border-transparent text-platinum hover:text-accent-gold underline-offset-4',
   }
 
   const sizes = {

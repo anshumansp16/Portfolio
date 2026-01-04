@@ -21,7 +21,7 @@ export function RotatingText({ words, interval = 3000, className }: RotatingText
   }, [words.length, interval])
 
   return (
-    <span className={`inline-block ${className}`}>
+    <span className={`inline-block relative ${className}`} style={{ minWidth: '320px', textAlign: 'center' }}>
       <AnimatePresence mode="wait">
         <motion.span
           key={currentIndex}
@@ -32,7 +32,7 @@ export function RotatingText({ words, interval = 3000, className }: RotatingText
             duration: 0.5,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="inline-block"
+          className="inline-block whitespace-nowrap"
         >
           {words[currentIndex]}
         </motion.span>

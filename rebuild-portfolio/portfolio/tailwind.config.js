@@ -23,9 +23,10 @@ module.exports = {
           DEFAULT: '#FBF6EE',
           muted: '#D4C5A9',
         },
-        teal: {
-          brilliant: '#2DD4BF',
-          glow: 'rgba(45, 212, 191, 0.15)',
+        accent: {
+          gold: '#D4C5A9',
+          glow: 'rgba(212, 197, 169, 0.15)',
+          bright: '#E5D9C0',
         },
       },
       fontFamily: {
@@ -80,9 +81,9 @@ module.exports = {
       boxShadow: {
         // Luxury elevation shadows
         'luxury-sm': '0 2px 8px rgba(0, 0, 0, 0.2)',
-        'luxury': '0 4px 12px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(45, 212, 191, 0.1)',
-        'luxury-lg': '0 8px 24px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(45, 212, 191, 0.1), 0 0 32px rgba(45, 212, 191, 0.08)',
-        'luxury-xl': '0 24px 48px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(45, 212, 191, 0.15), 0 0 64px rgba(45, 212, 191, 0.12)',
+        'luxury': '0 4px 12px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(212, 197, 169, 0.1)',
+        'luxury-lg': '0 8px 24px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(212, 197, 169, 0.1), 0 0 32px rgba(212, 197, 169, 0.08)',
+        'luxury-xl': '0 24px 48px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(212, 197, 169, 0.15), 0 0 64px rgba(212, 197, 169, 0.12)',
       },
       backdropBlur: {
         'luxury': '12px',

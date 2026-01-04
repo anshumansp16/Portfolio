@@ -72,21 +72,21 @@ function MetricCard({
       <div className="glow" />
 
       {/* Number */}
-      <div className="text-6xl md:text-7xl font-bold text-platinum mb-4">
+      <div className="text-4xl md:text-5xl font-bold text-platinum mb-3">
         {prefix}
         {decimals > 0 ? count.toFixed(decimals) : formatNumber(Math.floor(count))}
         {suffix}
       </div>
 
       {/* Label */}
-      <h3 className="text-headline-sm font-medium text-platinum mb-2">{label}</h3>
+      <h3 className="text-body font-medium text-platinum mb-2">{label}</h3>
 
       {/* Description */}
       <p className="text-body-sm text-graphite">{description}</p>
 
       {/* Decorative Line */}
       <motion.div
-        className="absolute top-0 left-1/2 transform -translate-x-1/2 w-12 h-px bg-gradient-to-r from-transparent via-teal-brilliant to-transparent"
+        className="absolute top-0 left-1/2 transform -translate-x-1/2 w-12 h-px bg-gradient-to-r from-transparent via-accent-gold to-transparent"
         initial={{ scaleX: 0 }}
         whileInView={{ scaleX: 1 }}
         viewport={{ once: true }}
@@ -147,9 +147,9 @@ export function Metrics() {
     <section className="section-padding bg-noir-primary relative">
       <Container>
         {/* Section Header */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-12">
           <motion.p
-            className="text-label text-graphite mb-4"
+            className="text-label text-graphite mb-3"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -158,7 +158,7 @@ export function Metrics() {
             IMPACT METRICS
           </motion.p>
           <motion.h2
-            className="text-headline-lg text-platinum"
+            className="text-headline-md text-platinum"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

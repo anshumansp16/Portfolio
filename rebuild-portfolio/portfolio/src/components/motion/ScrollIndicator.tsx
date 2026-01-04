@@ -33,7 +33,7 @@ export function ScrollIndicator() {
       {/* Animated Line */}
       <div className="relative w-px h-16 bg-graphite/30 overflow-hidden">
         <motion.div
-          className="absolute w-full h-8 bg-gradient-to-b from-transparent via-teal-brilliant to-transparent"
+          className="absolute w-full h-8 bg-gradient-to-b from-transparent via-accent-gold to-transparent"
           animate={{
             y: ['-100%', '200%'],
           }}
@@ -47,7 +47,7 @@ export function ScrollIndicator() {
 
       {/* Arrow */}
       <motion.svg
-        className="w-4 h-4 text-graphite group-hover:text-teal-brilliant transition-colors duration-300"
+        className="w-4 h-4 text-graphite group-hover:text-accent-gold transition-colors duration-300"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"

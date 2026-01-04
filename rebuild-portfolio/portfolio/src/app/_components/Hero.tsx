@@ -34,28 +34,38 @@ export function Hero() {
           </motion.p>
 
           {/* Main Title with Text Reveal */}
-          <h1 className="text-display-xl font-display font-normal text-platinum max-w-5xl">
-            <TextReveal delay={0.4}>ANSHUMAN PARMAR</TextReveal>
+          <h1
+            className="text-platinum max-w-5xl"
+            style={{
+              fontFamily: 'var(--font-signature)',
+              fontSize: '5.5rem',
+              fontWeight: 400,
+              letterSpacing: '0.02em',
+            }}
+          >
+            <TextReveal delay={0.4}>Anshuman Parmar</TextReveal>
           </h1>
 
           {/* Tagline with Rotating Text */}
           <motion.div
-            className="text-headline-md font-sans font-medium text-silver max-w-3xl"
+            className="text-headline-md font-sans text-platinum/90 max-w-4xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.2 }}
           >
-            <span className="inline-block">Architecting</span>{' '}
-            <RotatingText
-              words={rotatingWords}
-              className="text-gradient inline-block min-w-[280px] md:min-w-[400px]"
-            />{' '}
-            <span className="inline-block">that Transform Business</span>
+            <div className="flex items-center justify-center gap-x-3 flex-wrap">
+              <span className="font-light tracking-wide">Architecting</span>
+              <RotatingText
+                words={rotatingWords}
+                className="text-accent-gold font-medium"
+              />
+              <span className="font-light tracking-wide">that Transform Business</span>
+            </div>
           </motion.div>
 
           {/* Description */}
           <motion.p
-            className="text-body text-graphite max-w-2xl"
+            className="text-body-sm text-silver/70 max-w-xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.4 }}
@@ -67,7 +77,7 @@ export function Hero() {
 
           {/* CTA Buttons */}
           <motion.div
-            className="flex flex-wrap items-center justify-center gap-4 pt-4"
+            className="flex flex-wrap items-center justify-center gap-4 pt-6 pb-12"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.6 }}

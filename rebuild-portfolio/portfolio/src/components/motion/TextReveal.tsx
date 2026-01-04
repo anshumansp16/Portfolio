@@ -32,7 +32,7 @@ export function TextReveal({ children, delay = 0, className }: TextRevealProps) 
       opacity: 1,
       transition: {
         duration: 0.8,
-        ease: [0.22, 1, 0.36, 1],
+        ease: [0.22, 1, 0.36, 1] as const,
       },
     },
   }

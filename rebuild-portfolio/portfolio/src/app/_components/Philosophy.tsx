@@ -16,10 +16,10 @@ export function Philosophy() {
   const y = useTransform(scrollYProgress, [0, 1], [40, 0])
 
   return (
-    <section ref={ref} className="section-padding-lg bg-noir-void relative overflow-hidden">
+    <section ref={ref} className="section-padding bg-noir-void relative overflow-hidden">
       {/* Decorative Line */}
       <motion.div
-        className="absolute top-0 left-1/2 transform -translate-x-1/2 w-px h-24 bg-gradient-to-b from-transparent via-graphite to-transparent"
+        className="absolute top-0 left-1/2 transform -translate-x-1/2 w-px h-20 bg-gradient-to-b from-transparent via-graphite to-transparent"
         initial={{ scaleY: 0 }}
         whileInView={{ scaleY: 1 }}
         viewport={{ once: true }}
@@ -27,7 +27,7 @@ export function Philosophy() {
       />
 
       <Container size="narrow">
-        <div className="text-center space-y-8">
+        <div className="text-center space-y-6">
           {/* Label */}
           <motion.p
             className="text-label text-graphite"
@@ -41,12 +41,11 @@ export function Philosophy() {
 
           {/* Quote with Scroll-Driven Opacity */}
           <motion.blockquote
-            className="text-headline-md md:text-display-md font-display italic text-platinum"
+            className="text-headline-sm md:text-headline-md font-display italic text-platinum"
             style={{ opacity, y }}
           >
-            "At the intersection of artificial intelligence and enterprise
-            scalability, I architect systems that don't just work—they
-            fundamentally transform how businesses operate in the AI-first era."
+            "True innovation isn't just building what's possible today—it's
+            architecting systems that unlock what wasn't possible yesterday."
           </motion.blockquote>
 
           {/* Decorative Elements */}
@@ -58,7 +57,7 @@ export function Philosophy() {
             transition={{ delay: 0.4, duration: 0.8 }}
           >
             <div className="h-px w-12 bg-gradient-to-r from-transparent to-graphite" />
-            <div className="w-1.5 h-1.5 rounded-full bg-teal-brilliant animate-glow-pulse" />
+            <div className="w-1.5 h-1.5 rounded-full bg-accent-gold animate-glow-pulse" />
             <div className="h-px w-12 bg-gradient-to-l from-transparent to-graphite" />
           </motion.div>
         </div>
@@ -66,7 +65,7 @@ export function Philosophy() {
 
       {/* Bottom Decorative Line */}
       <motion.div
-        className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-px h-24 bg-gradient-to-t from-transparent via-graphite to-transparent"
+        className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-px h-20 bg-gradient-to-t from-transparent via-graphite to-transparent"
         initial={{ scaleY: 0 }}
         whileInView={{ scaleY: 1 }}
         viewport={{ once: true }}

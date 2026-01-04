@@ -44,8 +44,8 @@ export function GradientMesh() {
         mouseY * 0.3,
         canvas.width * 0.5
       )
-      gradient1.addColorStop(0, 'rgba(45, 212, 191, 0.08)')
-      gradient1.addColorStop(0.5, 'rgba(45, 212, 191, 0.02)')
+      gradient1.addColorStop(0, 'rgba(212, 197, 169, 0.02)')
+      gradient1.addColorStop(0.5, 'rgba(212, 197, 169, 0.005)')
       gradient1.addColorStop(1, 'transparent')
 
       const gradient2 = ctx.createRadialGradient(

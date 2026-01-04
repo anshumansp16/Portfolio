@@ -102,7 +102,11 @@ function RotatingText({ words, interval = 3000, className }) {
         interval
     ]);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-        className: `inline-block ${className}`,
+        className: `inline-block relative ${className}`,
+        style: {
+            minWidth: '320px',
+            textAlign: 'center'
+        },
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AnimatePresence"], {
             mode: "wait",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].span, {
@@ -130,7 +134,7 @@ function RotatingText({ words, interval = 3000, className }) {
                         1
                     ]
                 },
-                className: "inline-block",
+                className: "inline-block whitespace-nowrap",
                 children: words[currentIndex]
             }, currentIndex, false, {
                 fileName: "[project]/rebuild-portfolio/portfolio/src/components/motion/RotatingText.tsx",
@@ -201,7 +205,7 @@ function ScrollIndicator() {
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "relative w-px h-16 bg-graphite/30 overflow-hidden",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                    className: "absolute w-full h-8 bg-gradient-to-b from-transparent via-teal-brilliant to-transparent",
+                    className: "absolute w-full h-8 bg-gradient-to-b from-transparent via-accent-gold to-transparent",
                     animate: {
                         y: [
                             '-100%',
@@ -224,7 +228,7 @@ function ScrollIndicator() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].svg, {
-                className: "w-4 h-4 text-graphite group-hover:text-teal-brilliant transition-colors duration-300",
+                className: "w-4 h-4 text-graphite group-hover:text-accent-gold transition-colors duration-300",
                 fill: "none",
                 viewBox: "0 0 24 24",
                 stroke: "currentColor",
@@ -304,8 +308,8 @@ function GradientMesh() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             // Create multiple radial gradients
             const gradient1 = ctx.createRadialGradient(mouseX * 0.3, mouseY * 0.3, 0, mouseX * 0.3, mouseY * 0.3, canvas.width * 0.5);
-            gradient1.addColorStop(0, 'rgba(45, 212, 191, 0.08)');
-            gradient1.addColorStop(0.5, 'rgba(45, 212, 191, 0.02)');
+            gradient1.addColorStop(0, 'rgba(212, 197, 169, 0.02)');
+            gradient1.addColorStop(0.5, 'rgba(212, 197, 169, 0.005)');
             gradient1.addColorStop(1, 'transparent');
             const gradient2 = ctx.createRadialGradient(canvas.width - mouseX * 0.2, canvas.height - mouseY * 0.2, 0, canvas.width - mouseX * 0.2, canvas.height - mouseY * 0.2, canvas.width * 0.4);
             gradient2.addColorStop(0, 'rgba(251, 246, 238, 0.03)');
@@ -405,13 +409,19 @@ function Hero() {
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                            className: "text-display-xl font-display font-normal text-platinum max-w-5xl",
+                            className: "text-platinum max-w-5xl",
+                            style: {
+                                fontFamily: 'var(--font-signature)',
+                                fontSize: '5.5rem',
+                                fontWeight: 400,
+                                letterSpacing: '0.02em'
+                            },
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$src$2f$components$2f$motion$2f$TextReveal$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TextReveal"], {
                                 delay: 0.4,
-                                children: "ANSHUMAN PARMAR"
+                                children: "Anshuman Parmar"
                             }, void 0, false, {
                                 fileName: "[project]/rebuild-portfolio/portfolio/src/app/_components/Hero.tsx",
-                                lineNumber: 38,
+                                lineNumber: 46,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
@@ -420,7 +430,7 @@ function Hero() {
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                            className: "text-headline-md font-sans font-medium text-silver max-w-3xl",
+                            className: "text-headline-md font-sans text-platinum/90 max-w-4xl",
                             initial: {
                                 opacity: 0,
                                 y: 20
@@ -433,41 +443,46 @@ function Hero() {
                                 duration: 0.8,
                                 delay: 1.2
                             },
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: "inline-block",
-                                    children: "Architecting"
-                                }, void 0, false, {
-                                    fileName: "[project]/rebuild-portfolio/portfolio/src/app/_components/Hero.tsx",
-                                    lineNumber: 48,
-                                    columnNumber: 13
-                                }, this),
-                                ' ',
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$src$2f$components$2f$motion$2f$RotatingText$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["RotatingText"], {
-                                    words: rotatingWords,
-                                    className: "text-gradient inline-block min-w-[280px] md:min-w-[400px]"
-                                }, void 0, false, {
-                                    fileName: "[project]/rebuild-portfolio/portfolio/src/app/_components/Hero.tsx",
-                                    lineNumber: 49,
-                                    columnNumber: 13
-                                }, this),
-                                ' ',
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: "inline-block",
-                                    children: "that Transform Business"
-                                }, void 0, false, {
-                                    fileName: "[project]/rebuild-portfolio/portfolio/src/app/_components/Hero.tsx",
-                                    lineNumber: 53,
-                                    columnNumber: 13
-                                }, this)
-                            ]
-                        }, void 0, true, {
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex items-center justify-center gap-x-3 flex-wrap",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "font-light tracking-wide",
+                                        children: "Architecting"
+                                    }, void 0, false, {
+                                        fileName: "[project]/rebuild-portfolio/portfolio/src/app/_components/Hero.tsx",
+                                        lineNumber: 57,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$src$2f$components$2f$motion$2f$RotatingText$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["RotatingText"], {
+                                        words: rotatingWords,
+                                        className: "text-accent-gold font-medium"
+                                    }, void 0, false, {
+                                        fileName: "[project]/rebuild-portfolio/portfolio/src/app/_components/Hero.tsx",
+                                        lineNumber: 58,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "font-light tracking-wide",
+                                        children: "that Transform Business"
+                                    }, void 0, false, {
+                                        fileName: "[project]/rebuild-portfolio/portfolio/src/app/_components/Hero.tsx",
+                                        lineNumber: 62,
+                                        columnNumber: 15
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/rebuild-portfolio/portfolio/src/app/_components/Hero.tsx",
+                                lineNumber: 56,
+                                columnNumber: 13
+                            }, this)
+                        }, void 0, false, {
                             fileName: "[project]/rebuild-portfolio/portfolio/src/app/_components/Hero.tsx",
-                            lineNumber: 42,
+                            lineNumber: 50,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].p, {
-                            className: "text-body text-graphite max-w-2xl",
+                            className: "text-body-sm text-silver/70 max-w-xl",
                             initial: {
                                 opacity: 0,
                                 y: 20
@@ -483,11 +498,11 @@ function Hero() {
                             children: "At the intersection of artificial intelligence and enterprise scalability, I build systems that don't just work—they fundamentally transform how businesses operate in the AI-first era."
                         }, void 0, false, {
                             fileName: "[project]/rebuild-portfolio/portfolio/src/app/_components/Hero.tsx",
-                            lineNumber: 57,
+                            lineNumber: 67,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                            className: "flex flex-wrap items-center justify-center gap-4 pt-4",
+                            className: "flex flex-wrap items-center justify-center gap-4 pt-6 pb-12",
                             initial: {
                                 opacity: 0,
                                 y: 20
@@ -509,12 +524,12 @@ function Hero() {
                                         children: "Explore My Work"
                                     }, void 0, false, {
                                         fileName: "[project]/rebuild-portfolio/portfolio/src/app/_components/Hero.tsx",
-                                        lineNumber: 79,
+                                        lineNumber: 89,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/rebuild-portfolio/portfolio/src/app/_components/Hero.tsx",
-                                    lineNumber: 75,
+                                    lineNumber: 85,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -525,18 +540,18 @@ function Hero() {
                                         children: "Let's Connect"
                                     }, void 0, false, {
                                         fileName: "[project]/rebuild-portfolio/portfolio/src/app/_components/Hero.tsx",
-                                        lineNumber: 85,
+                                        lineNumber: 95,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/rebuild-portfolio/portfolio/src/app/_components/Hero.tsx",
-                                    lineNumber: 81,
+                                    lineNumber: 91,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/rebuild-portfolio/portfolio/src/app/_components/Hero.tsx",
-                            lineNumber: 69,
+                            lineNumber: 79,
                             columnNumber: 11
                         }, this)
                     ]
@@ -554,12 +569,12 @@ function Hero() {
                 className: "absolute bottom-12 left-1/2 transform -translate-x-1/2",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$src$2f$components$2f$motion$2f$ScrollIndicator$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ScrollIndicator"], {}, void 0, false, {
                     fileName: "[project]/rebuild-portfolio/portfolio/src/app/_components/Hero.tsx",
-                    lineNumber: 93,
+                    lineNumber: 103,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/rebuild-portfolio/portfolio/src/app/_components/Hero.tsx",
-                lineNumber: 92,
+                lineNumber: 102,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -573,7 +588,7 @@ function Hero() {
                 }
             }, void 0, false, {
                 fileName: "[project]/rebuild-portfolio/portfolio/src/app/_components/Hero.tsx",
-                lineNumber: 97,
+                lineNumber: 107,
                 columnNumber: 7
             }, this)
         ]
@@ -655,10 +670,10 @@ function Philosophy() {
     ]);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         ref: ref,
-        className: "section-padding-lg bg-noir-void relative overflow-hidden",
+        className: "section-padding bg-noir-void relative overflow-hidden",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                className: "absolute top-0 left-1/2 transform -translate-x-1/2 w-px h-24 bg-gradient-to-b from-transparent via-graphite to-transparent",
+                className: "absolute top-0 left-1/2 transform -translate-x-1/2 w-px h-20 bg-gradient-to-b from-transparent via-graphite to-transparent",
                 initial: {
                     scaleY: 0
                 },
@@ -680,7 +695,7 @@ function Philosophy() {
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$src$2f$components$2f$ui$2f$Container$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Container"], {
                 size: "narrow",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "text-center space-y-8",
+                    className: "text-center space-y-6",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].p, {
                             className: "text-label text-graphite",
@@ -705,12 +720,12 @@ function Philosophy() {
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].blockquote, {
-                            className: "text-headline-md md:text-display-md font-display italic text-platinum",
+                            className: "text-headline-sm md:text-headline-md font-display italic text-platinum",
                             style: {
                                 opacity,
                                 y
                             },
-                            children: '"At the intersection of artificial intelligence and enterprise scalability, I architect systems that don\'t just work—they fundamentally transform how businesses operate in the AI-first era."'
+                            children: "\"True innovation isn't just building what's possible today—it's architecting systems that unlock what wasn't possible yesterday.\""
                         }, void 0, false, {
                             fileName: "[project]/rebuild-portfolio/portfolio/src/app/_components/Philosophy.tsx",
                             lineNumber: 43,
@@ -736,27 +751,27 @@ function Philosophy() {
                                     className: "h-px w-12 bg-gradient-to-r from-transparent to-graphite"
                                 }, void 0, false, {
                                     fileName: "[project]/rebuild-portfolio/portfolio/src/app/_components/Philosophy.tsx",
-                                    lineNumber: 60,
+                                    lineNumber: 59,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "w-1.5 h-1.5 rounded-full bg-teal-brilliant animate-glow-pulse"
+                                    className: "w-1.5 h-1.5 rounded-full bg-accent-gold animate-glow-pulse"
                                 }, void 0, false, {
                                     fileName: "[project]/rebuild-portfolio/portfolio/src/app/_components/Philosophy.tsx",
-                                    lineNumber: 61,
+                                    lineNumber: 60,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "h-px w-12 bg-gradient-to-l from-transparent to-graphite"
                                 }, void 0, false, {
                                     fileName: "[project]/rebuild-portfolio/portfolio/src/app/_components/Philosophy.tsx",
-                                    lineNumber: 62,
+                                    lineNumber: 61,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/rebuild-portfolio/portfolio/src/app/_components/Philosophy.tsx",
-                            lineNumber: 53,
+                            lineNumber: 52,
                             columnNumber: 11
                         }, this)
                     ]
@@ -771,7 +786,7 @@ function Philosophy() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                className: "absolute bottom-0 left-1/2 transform -translate-x-1/2 w-px h-24 bg-gradient-to-t from-transparent via-graphite to-transparent",
+                className: "absolute bottom-0 left-1/2 transform -translate-x-1/2 w-px h-20 bg-gradient-to-t from-transparent via-graphite to-transparent",
                 initial: {
                     scaleY: 0
                 },
@@ -788,7 +803,7 @@ function Philosophy() {
                 }
             }, void 0, false, {
                 fileName: "[project]/rebuild-portfolio/portfolio/src/app/_components/Philosophy.tsx",
-                lineNumber: 68,
+                lineNumber: 67,
                 columnNumber: 7
             }, this)
         ]
@@ -937,7 +952,7 @@ function MetricCard({ value, suffix = '', prefix = '', label, description, decim
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "text-6xl md:text-7xl font-bold text-platinum mb-4",
+                className: "text-4xl md:text-5xl font-bold text-platinum mb-3",
                 children: [
                     prefix,
                     decimals > 0 ? count.toFixed(decimals) : (0, __TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["formatNumber"])(Math.floor(count)),
@@ -949,7 +964,7 @@ function MetricCard({ value, suffix = '', prefix = '', label, description, decim
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                className: "text-headline-sm font-medium text-platinum mb-2",
+                className: "text-body font-medium text-platinum mb-2",
                 children: label
             }, void 0, false, {
                 fileName: "[project]/rebuild-portfolio/portfolio/src/app/_components/Metrics.tsx",
@@ -965,7 +980,7 @@ function MetricCard({ value, suffix = '', prefix = '', label, description, decim
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                className: "absolute top-0 left-1/2 transform -translate-x-1/2 w-12 h-px bg-gradient-to-r from-transparent via-teal-brilliant to-transparent",
+                className: "absolute top-0 left-1/2 transform -translate-x-1/2 w-12 h-px bg-gradient-to-r from-transparent via-accent-gold to-transparent",
                 initial: {
                     scaleX: 0
                 },
@@ -1042,10 +1057,10 @@ function Metrics() {
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$src$2f$components$2f$ui$2f$Container$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Container"], {
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "text-center mb-20",
+                    className: "text-center mb-12",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].p, {
-                            className: "text-label text-graphite mb-4",
+                            className: "text-label text-graphite mb-3",
                             initial: {
                                 opacity: 0,
                                 y: 20
@@ -1067,7 +1082,7 @@ function Metrics() {
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$rebuild$2d$portfolio$2f$portfolio$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].h2, {
-                            className: "text-headline-lg text-platinum",
+                            className: "text-headline-md text-platinum",
                             initial: {
                                 opacity: 0,
                                 y: 20
