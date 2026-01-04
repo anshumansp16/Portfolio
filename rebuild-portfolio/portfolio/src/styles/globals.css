@@ -129,6 +129,49 @@
     @apply relative z-10;
   }
 
+  /* Refined Luxury Button - Slower, Heavier Hover */
+  .luxury-button-refined {
+    @apply relative px-8 py-4 bg-transparent border border-platinum/70 rounded-full;
+    @apply text-platinum text-sm font-medium tracking-wider;
+    @apply cursor-pointer overflow-hidden;
+    @apply transition-all duration-500 ease-luxury;
+  }
+
+  .luxury-button-refined::before {
+    @apply content-[''] absolute inset-0 bg-accent-gold;
+    transform: translateY(100%);
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .luxury-button-refined:hover::before {
+    transform: translateY(0);
+  }
+
+  .luxury-button-refined:hover {
+    @apply border-accent-gold text-noir-void -translate-y-1;
+    box-shadow: 0 8px 24px rgba(212, 197, 169, 0.15);
+  }
+
+  .luxury-button-refined span {
+    @apply relative z-10;
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  /* Primary Button - Dominant */
+  .luxury-button-primary {
+    @apply border-platinum/85;
+    border-width: 1.5px;
+  }
+
+  /* Secondary Button - Receded */
+  .luxury-button-secondary {
+    @apply border-graphite/60 text-silver/80;
+  }
+
+  .luxury-button-secondary:hover {
+    @apply border-accent-gold text-noir-void;
+  }
+
   /* Luxury Link */
   .luxury-link {
     @apply relative text-platinum no-underline;
