@@ -1,178 +1,112 @@
 'use client'
 
-import React, { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { Container } from '@/components/ui/Container'
-import { useCountUp } from '@/lib/hooks/useCountUp'
-import { formatNumber } from '@/lib/utils'
 
-interface MetricCardProps {
-  value: number
-  suffix?: string
-  prefix?: string
-  label: string
-  description: string
-  decimals?: number
+interface ProofProps {
+  metric: string
+  consequence: string
+  qualifier: string
+  size?: 'large' | 'small'
   index: number
 }
 
-function MetricCard({
-  value,
-  suffix = '',
-  prefix = '',
-  label,
-  description,
-  decimals = 0,
-  index,
-}: MetricCardProps) {
-  const [hasStarted, setHasStarted] = useState(false)
-  const { count, start } = useCountUp({
-    end: value,
-    duration: 2000,
-    decimals,
-    startOnMount: false,
-  })
-
-  const ref = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && !hasStarted) {
-            setHasStarted(true)
-            start()
-          }
-        })
-      },
-      { threshold: 0.5 }
-    )
-
-    if (ref.current) {
-      observer.observe(ref.current)
-    }
-
-    return () => observer.disconnect()
-  }, [hasStarted, start])
+function Proof({ metric, consequence, qualifier, size = 'small', index }: ProofProps) {
+  const isLarge = size === 'large'
 
   return (
     <motion.div
-      ref={ref}
-      className="luxury-card group relative text-center"
-      initial={{ opacity: 0, y: 40 }}
+      className="relative group"
+      initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-100px' }}
+      viewport={{ once: true, margin: '-50px' }}
       transition={{
-        duration: 0.6,
-        delay: index * 0.1,
+        duration: 1,
+        delay: index * 0.15,
         ease: [0.22, 1, 0.36, 1],
       }}
     >
-      {/* Glow Effect */}
-      <div className="glow" />
+      {/* Ultra-soft border */}
+      <div className="absolute inset-0 border border-white/[0.03] rounded-lg" />
 
-      {/* Number */}
-      <div className="text-4xl md:text-5xl font-bold text-platinum mb-3">
-        {prefix}
-        {decimals > 0 ? count.toFixed(decimals) : formatNumber(Math.floor(count))}
-        {suffix}
+      <div className={`relative ${isLarge ? 'p-12 md:p-16' : 'p-8 md:p-10'}`}>
+        {/* Metric */}
+        <div
+          className={`font-mono text-platinum mb-4 ${
+            isLarge ? 'text-5xl md:text-6xl' : 'text-3xl md:text-4xl'
+          }`}
+          style={{
+            fontWeight: 500,
+            letterSpacing: '-0.02em',
+          }}
+        >
+          {metric}
+        </div>
+
+        {/* Consequence */}
+        <p
+          className={`text-platinum/90 mb-3 ${
+            isLarge ? 'text-body-lg md:text-headline-sm' : 'text-body'
+          }`}
+          style={{
+            fontWeight: 300,
+            letterSpacing: '-0.01em',
+            lineHeight: 1.6,
+          }}
+        >
+          {consequence}
+        </p>
+
+        {/* Qualifier */}
+        <p
+          className="text-silver/50 text-body-sm"
+          style={{
+            fontWeight: 300,
+            letterSpacing: '0.01em',
+          }}
+        >
+          {qualifier}
+        </p>
       </div>
-
-      {/* Label */}
-      <h3 className="text-body font-medium text-platinum mb-2">{label}</h3>
-
-      {/* Description */}
-      <p className="text-body-sm text-graphite">{description}</p>
-
-      {/* Decorative Line */}
-      <motion.div
-        className="absolute top-0 left-1/2 transform -translate-x-1/2 w-12 h-px bg-gradient-to-r from-transparent via-accent-gold to-transparent"
-        initial={{ scaleX: 0 }}
-        whileInView={{ scaleX: 1 }}
-        viewport={{ once: true }}
-        transition={{ delay: index * 0.1 + 0.3, duration: 0.6 }}
-      />
     </motion.div>
   )
 }
 
-const metricsData = [
+const proofs = [
   {
-    value: 50000,
-    suffix: '+',
-    label: 'Tasks Automated Daily',
-    description: 'Across production systems',
-    decimals: 0,
+    metric: '50k+',
+    consequence: 'daily workflows executed',
+    qualifier: 'without manual intervention',
+    size: 'large' as const,
   },
   {
-    value: 99.9,
-    suffix: '%',
-    label: 'System Uptime',
-    description: 'Enterprise-grade reliability',
-    decimals: 1,
+    metric: '99.9%',
+    consequence: 'uptime under load',
+    qualifier: 'in production environments',
+    size: 'small' as const,
   },
   {
-    value: 2.3,
-    suffix: 'M',
-    prefix: '$',
-    label: 'Revenue Impact',
-    description: 'Generated for clients',
-    decimals: 1,
-  },
-  {
-    value: 85,
-    suffix: '%',
-    label: 'AI Accuracy',
-    description: 'Production model performance',
-    decimals: 0,
-  },
-  {
-    value: 10000,
-    suffix: '+',
-    label: 'Concurrent Requests',
-    description: 'Peak system throughput',
-    decimals: 0,
-  },
-  {
-    value: 60,
-    suffix: '%',
-    label: 'Deploy Time Reduction',
-    description: 'Through automation',
-    decimals: 0,
+    metric: '10k+',
+    consequence: 'concurrent requests',
+    qualifier: 'with predictable latency',
+    size: 'small' as const,
   },
 ]
 
 export function Metrics() {
   return (
-    <section className="section-padding bg-noir-primary relative">
+    <section className="relative bg-noir-primary py-32 md:py-40">
       <Container>
-        {/* Section Header */}
-        <div className="text-center mb-12">
-          <motion.p
-            className="text-label text-graphite mb-3"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            IMPACT METRICS
-          </motion.p>
-          <motion.h2
-            className="text-headline-md text-platinum"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-          >
-            Building Systems That Deliver Results
-          </motion.h2>
-        </div>
+        {/* Asymmetric Layout: 1 big left, 2 stacked right */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+          {/* Large Proof */}
+          <Proof {...proofs[0]} index={0} />
 
-        {/* Metrics Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {metricsData.map((metric, index) => (
-            <MetricCard key={metric.label} {...metric} index={index} />
-          ))}
+          {/* Stacked Small Proofs */}
+          <div className="grid grid-cols-1 gap-6 lg:gap-8">
+            <Proof {...proofs[1]} index={1} />
+            <Proof {...proofs[2]} index={2} />
+          </div>
         </div>
       </Container>
     </section>

@@ -1,76 +1,54 @@
 'use client'
 
-import React from 'react'
-import { motion, useScroll, useTransform } from 'framer-motion'
-import { useRef } from 'react'
+import { motion } from 'framer-motion'
 import { Container } from '@/components/ui/Container'
 
+const principles = [
+  'I design for failure first.',
+  'I optimize for handoffs and longevity.',
+  'I ship systems that stay shipped.',
+]
+
 export function Philosophy() {
-  const ref = useRef<HTMLElement>(null)
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['start 0.9', 'start 0.4'],
-  })
-
-  const opacity = useTransform(scrollYProgress, [0, 1], [0.3, 1])
-  const y = useTransform(scrollYProgress, [0, 1], [40, 0])
-
   return (
-    <section ref={ref} className="section-padding bg-noir-void relative overflow-hidden">
-      {/* Decorative Line */}
+    <section className="relative bg-noir-void py-32 md:py-40 overflow-hidden">
+      {/* The Line - Vertical Seam */}
       <motion.div
-        className="absolute top-0 left-1/2 transform -translate-x-1/2 w-px h-20 bg-gradient-to-b from-transparent via-graphite to-transparent"
+        className="absolute left-12 md:left-24 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-graphite/30 to-transparent"
         initial={{ scaleY: 0 }}
         whileInView={{ scaleY: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1, ease: 'easeOut' }}
+        viewport={{ once: true, margin: '-100px' }}
+        transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
       />
 
       <Container size="narrow">
-        <div className="text-center space-y-6">
-          {/* Label */}
-          <motion.p
-            className="text-label text-graphite"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            MY PHILOSOPHY
-          </motion.p>
-
-          {/* Quote with Scroll-Driven Opacity */}
-          <motion.blockquote
-            className="text-headline-sm md:text-headline-md font-display italic text-platinum"
-            style={{ opacity, y }}
-          >
-            "True innovation isn't just building what's possible today—it's
-            architecting systems that unlock what wasn't possible yesterday."
-          </motion.blockquote>
-
-          {/* Decorative Elements */}
-          <motion.div
-            className="flex items-center justify-center gap-4 pt-4"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-          >
-            <div className="h-px w-12 bg-gradient-to-r from-transparent to-graphite" />
-            <div className="w-1.5 h-1.5 rounded-full bg-accent-gold animate-glow-pulse" />
-            <div className="h-px w-12 bg-gradient-to-l from-transparent to-graphite" />
-          </motion.div>
+        <div className="relative">
+          {/* Principles */}
+          <div className="space-y-8 md:space-y-10">
+            {principles.map((principle, index) => (
+              <motion.p
+                key={index}
+                className="text-headline-sm md:text-headline-md font-display text-platinum/90"
+                style={{
+                  fontWeight: 300,
+                  letterSpacing: '-0.015em',
+                  lineHeight: 1.5,
+                }}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{
+                  duration: 1,
+                  delay: index * 0.2,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+              >
+                {principle}
+              </motion.p>
+            ))}
+          </div>
         </div>
       </Container>
-
-      {/* Bottom Decorative Line */}
-      <motion.div
-        className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-px h-20 bg-gradient-to-t from-transparent via-graphite to-transparent"
-        initial={{ scaleY: 0 }}
-        whileInView={{ scaleY: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1, ease: 'easeOut', delay: 0.3 }}
-      />
     </section>
   )
 }
