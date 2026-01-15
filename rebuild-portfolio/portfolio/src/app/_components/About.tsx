@@ -4,14 +4,13 @@ import { motion } from 'framer-motion'
 import { Container } from '@/components/ui/Container'
 
 const aboutLines = [
-  "I build production systems across automation, platforms, and delivery infrastructure.",
-  "Most of my work lives where reliability and speed are both non-negotiable.",
-  "Now I'm focused on turning operational complexity into leverage.",
+  "I build production systems where reliability and speed are both non-negotiable.",
+  "Now focused on turning operational complexity into leverage.",
 ]
 
 export function About() {
   return (
-    <section className="relative bg-noir-void py-32 md:py-40">
+    <section className="relative py-32 md:py-40">
       <Container size="narrow">
         <div className="relative">
           {/* Optional label */}

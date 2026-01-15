@@ -37,8 +37,8 @@ export function Navigation() {
   const [maxScroll, setMaxScroll] = useState(1000)
   const { scrollY } = useScroll()
 
-  // Transform background opacity based on scroll
-  const backgroundOpacity = useTransform(scrollY, [0, 100], [0, 0.95])
+  // Transform background opacity based on scroll - appear after scroll, 30-35% max
+  const backgroundOpacity = useTransform(scrollY, [0, 100], [0, 0.35])
 
   useEffect(() => {
     const handleScroll = () => {

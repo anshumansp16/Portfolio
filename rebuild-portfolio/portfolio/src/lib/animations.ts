@@ -4,9 +4,9 @@ import { Variants } from 'framer-motion'
  * Custom easing functions
  */
 export const easing = {
-  luxury: [0.4, 0.0, 0.2, 1],
-  smooth: [0.22, 1, 0.36, 1],
-  spring: [0.6, 0.05, 0.01, 0.99],
+  luxury: [0.4, 0.0, 0.2, 1] as const,
+  smooth: [0.22, 1, 0.36, 1] as const,
+  spring: [0.6, 0.05, 0.01, 0.99] as const,
 }
 
 /**

@@ -2,31 +2,45 @@ import { Hero } from './_components/Hero'
 import { Philosophy } from './_components/Philosophy'
 import { Metrics } from './_components/Metrics'
 import { SelectedSystems } from './_components/SelectedSystems'
+import { Talks } from './_components/Talks'
 import { HowIWork } from './_components/HowIWork'
 import { About } from './_components/About'
+import { MuseumSpine } from '@/components/ui/MuseumSpine'
+import { ProofStrip } from '@/components/ui/ProofStrip'
 
 export default function HomePage() {
   return (
-    <main className="relative">
-      {/* Scene 1: Arrival */}
-      <Hero />
+    <>
+      {/* Museum spine - continuous thread */}
+      <MuseumSpine />
 
-      {/* Scene 2: Doctrine */}
-      <Philosophy />
+      <main className="relative">
+        {/* Scene 1: Arrival */}
+        <Hero />
 
-      {/* Scene 3: Proof */}
-      <Metrics />
+        {/* Quiet proof strip */}
+        <ProofStrip />
 
-      {/* Scene 4: Selected Systems */}
-      <SelectedSystems />
+        {/* Scene 2: Principles */}
+        <Philosophy />
 
-      {/* Scene 5: How I Work */}
-      <HowIWork />
+        {/* Scene 3: Evidence */}
+        <Metrics />
 
-      {/* Scene 6: About */}
-      <About />
+        {/* Scene 4: Selected Systems */}
+        <SelectedSystems />
 
-      {/* Scene 7: Footer handled by layout */}
-    </main>
+        {/* Scene 5: Talks & Teaching */}
+        <Talks />
+
+        {/* Scene 6: Engagement */}
+        <HowIWork />
+
+        {/* Scene 7: About */}
+        <About />
+
+        {/* Footer handled by layout */}
+      </main>
+    </>
   )
 }

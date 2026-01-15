@@ -8,20 +8,20 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Foundation - Deep, Rich Blacks
+        // Museum palette - Near-black, not pure black
         noir: {
-          void: '#000000',
-          primary: '#0A0A0A',
-          elevated: '#141414',
-          subtle: '#1A1A1A',
+          void: '#070708',
+          primary: '#090A0C',
+          elevated: '#0B0C10',
+          subtle: '#0D0E12',
         },
-        // Accent - Precious Metal Tones
-        platinum: '#E5E7EB',
-        silver: '#9CA3AF',
-        graphite: '#4B5563',
+        // Warm off-white text
+        platinum: '#E9E6DF',
+        silver: 'rgba(233, 230, 223, 0.55)',
+        graphite: 'rgba(233, 230, 223, 0.35)',
         gold: {
-          DEFAULT: '#FBF6EE',
-          muted: '#D4C5A9',
+          DEFAULT: '#D4C5A9',
+          muted: 'rgba(212, 197, 169, 0.6)',
         },
         accent: {
           gold: '#D4C5A9',

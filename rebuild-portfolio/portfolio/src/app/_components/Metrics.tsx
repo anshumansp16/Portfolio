@@ -75,27 +75,27 @@ function Proof({ metric, consequence, qualifier, size = 'small', index }: ProofP
 const proofs = [
   {
     metric: '50k+',
-    consequence: 'daily workflows executed',
-    qualifier: 'without manual intervention',
+    consequence: 'workflows/day',
+    qualifier: 'automated end-to-end, no operator loop',
     size: 'large' as const,
   },
   {
     metric: '99.9%',
-    consequence: 'uptime under load',
-    qualifier: 'in production environments',
+    consequence: 'uptime',
+    qualifier: 'under real production load',
     size: 'small' as const,
   },
   {
     metric: '10k+',
     consequence: 'concurrent requests',
-    qualifier: 'with predictable latency',
+    qualifier: 'bounded latency, predictable failure modes',
     size: 'small' as const,
   },
 ]
 
 export function Metrics() {
   return (
-    <section className="relative bg-noir-primary py-32 md:py-40">
+    <section className="relative py-32 md:py-40">
       <Container>
         {/* Asymmetric Layout: 1 big left, 2 stacked right */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">

@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import { useMagneticCursor } from '@/lib/hooks/useMagneticCursor'
 import { cn } from '@/lib/utils'
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'onAnimationStart' | 'onDrag' | 'onDragEnd' | 'onDragStart'> {
   variant?: 'primary' | 'secondary' | 'text'
   size?: 'sm' | 'md' | 'lg'
   magnetic?: boolean

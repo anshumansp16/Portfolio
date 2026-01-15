@@ -18,7 +18,7 @@ const dontDo = [
 
 export function HowIWork() {
   return (
-    <section className="relative bg-noir-primary py-32 md:py-40">
+    <section className="relative py-32 md:py-40">
       {/* Drawing line (The Line motif) */}
       <motion.div
         className="absolute left-1/2 top-20 bottom-20 w-px bg-gradient-to-b from-transparent via-graphite/20 to-transparent"
