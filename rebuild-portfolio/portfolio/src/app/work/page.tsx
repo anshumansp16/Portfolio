@@ -9,75 +9,39 @@ export const metadata: Metadata = {
 
 const projects = [
   {
-    title: 'Enterprise AI Platform',
-    description: 'Built a scalable AI orchestration platform processing 50,000+ daily tasks with 99.9% uptime, reducing deployment time by 60% through intelligent automation.',
-    category: 'AI Infrastructure',
-    tags: ['Python', 'TensorFlow', 'Kubernetes', 'AWS'],
-    link: '/work/ai-platform',
+    title: 'TATVA',
+    description: 'A CLI that compresses setup → deploy into a repeatable path. Built for consistency across projects with streamlined workflow design and automation surface.',
+    category: 'Tooling',
+    tags: ['CLI', 'Templates', 'Environments', 'Deploy', 'SDLC Automation'],
+    link: '/work/tatva',
     metrics: [
-      { label: 'Uptime', value: '99.9%' },
-      { label: 'Tasks/Day', value: '50K+' },
-      { label: 'Time Saved', value: '60%' },
+      { label: 'Scope', value: 'CLI' },
+      { label: 'Focus', value: 'Workflow' },
+      { label: 'Role', value: 'Dev' },
     ],
   },
   {
-    title: 'Intelligent Document Processing',
-    description: 'Developed NLP-powered document analysis system with 85% accuracy, automating data extraction for enterprise clients and generating significant revenue impact.',
-    category: 'Natural Language Processing',
-    tags: ['NLP', 'PyTorch', 'FastAPI', 'React'],
-    link: '/work/document-ai',
+    title: 'Aarambh',
+    description: 'A learning platform built around retention loops and operational reliability. Handles user journeys, content delivery, and admin ops with performance under real traffic.',
+    category: 'Platform',
+    tags: ['User Journeys', 'Content Delivery', 'Admin Ops', 'Performance', 'Architecture'],
+    link: '/work/aarambh',
     metrics: [
-      { label: 'Accuracy', value: '85%' },
-      { label: 'Revenue', value: '$2.3M' },
-      { label: 'Automation', value: '100%' },
+      { label: 'Scope', value: 'Platform' },
+      { label: 'Focus', value: 'Retention' },
+      { label: 'Role', value: 'Architect' },
     ],
   },
   {
-    title: 'Real-Time Analytics Engine',
-    description: 'Architected high-throughput data pipeline handling 10,000+ concurrent requests with sub-second latency, enabling real-time business intelligence at scale.',
-    category: 'Data Engineering',
-    tags: ['Apache Kafka', 'Redis', 'PostgreSQL', 'Go'],
-    link: '/work/analytics-engine',
+    title: 'CrownKing',
+    description: 'Commerce system tuned for conversion, catalog scale, and clean operations. Handles product flows, payments, and fulfillment with speed and trust.',
+    category: 'Commerce',
+    tags: ['E-commerce', 'Payments', 'Product Flows', 'Fulfillment', 'Architecture'],
+    link: '/work/crownking',
     metrics: [
-      { label: 'Requests', value: '10K+' },
-      { label: 'Latency', value: '<1s' },
-      { label: 'Data/Day', value: '5TB' },
-    ],
-  },
-  {
-    title: 'Cloud Migration & Optimization',
-    description: 'Led enterprise cloud migration strategy, reducing infrastructure costs by 45% while improving performance and implementing auto-scaling solutions for peak efficiency.',
-    category: 'Cloud Architecture',
-    tags: ['AWS', 'Terraform', 'Docker', 'CI/CD'],
-    link: '/work/cloud-migration',
-    metrics: [
-      { label: 'Cost Saved', value: '45%' },
-      { label: 'Performance', value: '+35%' },
-      { label: 'Availability', value: '99.99%' },
-    ],
-  },
-  {
-    title: 'Predictive Maintenance System',
-    description: 'Implemented ML-based predictive analytics reducing equipment downtime by 70%, saving millions in operational costs through intelligent forecasting and proactive interventions.',
-    category: 'Machine Learning',
-    tags: ['Scikit-learn', 'Time Series', 'Azure', 'Power BI'],
-    link: '/work/predictive-maintenance',
-    metrics: [
-      { label: 'Downtime', value: '-70%' },
-      { label: 'Savings', value: '$5M+' },
-      { label: 'Accuracy', value: '92%' },
-    ],
-  },
-  {
-    title: 'Microservices Architecture',
-    description: 'Designed distributed system with API gateway serving 1M+ requests daily, ensuring scalability, fault tolerance, and seamless service orchestration across the platform.',
-    category: 'System Design',
-    tags: ['Node.js', 'GraphQL', 'MongoDB', 'RabbitMQ'],
-    link: '/work/microservices',
-    metrics: [
-      { label: 'Requests', value: '1M+' },
-      { label: 'Services', value: '25+' },
-      { label: 'Latency', value: '50ms' },
+      { label: 'Scope', value: 'Commerce' },
+      { label: 'Focus', value: 'Conversion' },
+      { label: 'Role', value: 'Build' },
     ],
   },
 ]
@@ -100,7 +64,7 @@ export default function WorkPage() {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {projects.map((project, index) => (
             <ProjectCard key={project.title} {...project} index={index} />
           ))}

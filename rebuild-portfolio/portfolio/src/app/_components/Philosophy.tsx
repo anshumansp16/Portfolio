@@ -4,9 +4,9 @@ import { motion } from 'framer-motion'
 import { Container } from '@/components/ui/Container'
 
 const principles = [
-  'I design for failure first.',
-  'I optimize for handoffs and longevity.',
-  'I ship systems that stay shipped.',
+  'I build AI systems that scale in production.',
+  'I automate what should never be manual.',
+  'I ship reliable code with 99.9% uptime.',
 ]
 
 export function Philosophy() {

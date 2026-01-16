@@ -69,7 +69,7 @@ const ContactInfo3D = () => {
           rotation={[0, 0, 0]}
           scale={[1.5, 1, 1]}
           label="GitHub"
-          link="https://github.com/anshumansp/"
+          link="https://github.com/anshumansp16/"
           color="#333333"
         />
       </Float>
@@ -81,7 +81,7 @@ const ContactInfo3D = () => {
           rotation={[0, 0, 0]}
           scale={[1.5, 1, 1]}
           label="LinkedIn"
-          link="https://www.linkedin.com/in/anshuman-parmar-757666219/"
+          link="https://www.linkedin.com/in/anshumansp16-757666219/"
           color="#0077b5"
         />
       </Float>

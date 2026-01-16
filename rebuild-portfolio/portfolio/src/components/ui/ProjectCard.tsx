@@ -55,13 +55,13 @@ export function ProjectCard({
 
           {/* Metrics */}
           {metrics && metrics.length > 0 && (
-            <div className="grid grid-cols-3 gap-4 mb-6 pb-6 border-b border-white/[0.06]">
+            <div className="grid grid-cols-3 gap-2 mb-6 pb-6 border-b border-white/[0.06]">
               {metrics.map((metric) => (
-                <div key={metric.label}>
-                  <p className="text-2xl font-bold text-platinum mb-1">
+                <div key={metric.label} className="min-w-0">
+                  <p className="text-sm font-semibold text-platinum mb-1 truncate">
                     {metric.value}
                   </p>
-                  <p className="text-label-sm text-graphite">{metric.label}</p>
+                  <p className="text-label-sm text-graphite truncate">{metric.label}</p>
                 </div>
               ))}
             </div>

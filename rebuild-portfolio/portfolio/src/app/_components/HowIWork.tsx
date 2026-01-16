@@ -4,16 +4,16 @@ import { motion } from 'framer-motion'
 import { Container } from '@/components/ui/Container'
 
 const broughtInFor = [
-  'clarify system boundaries',
-  'design architecture that survives production',
-  'eliminate delivery friction',
-  'ship with measurable reliability',
+  'build production-grade AI & RAG systems',
+  'architect browser automation at scale',
+  'design FastAPI microservices for high concurrency',
+  'deliver full-stack apps with measurable outcomes',
 ]
 
 const dontDo = [
-  '"quick prototypes" that can\'t be owned',
-  'endless rewrites without constraints',
-  'vanity architecture',
+  'systems without proper error handling',
+  'automation without reliability guarantees',
+  'architecture without scalability in mind',
 ]
 
 export function HowIWork() {

@@ -71,19 +71,19 @@ function Note({ title, excerpt, date, index }: NoteProps) {
 
 const notes = [
   {
-    title: 'On Shipping Systems That Stay Shipped',
-    excerpt: 'Most systems fail slowly, then all at once. The difference between reliable and fragile is usually just a few deliberate choices made early.',
-    date: '2024',
+    title: 'Building RAG Systems for Enterprise',
+    excerpt: 'Production-grade RAG architectures require more than vector search. Query accuracy improved 40% through careful embedding strategies and retrieval optimization.',
+    date: '2025',
   },
   {
-    title: 'Failure-First Architecture',
-    excerpt: 'Build for failure modes before success paths. When you design around what breaks, you stop pretending stability is the default.',
-    date: '2024',
+    title: 'Browser Automation That Scales',
+    excerpt: 'Processing 50K+ daily tasks requires thinking about failure modes first. Selenium and Playwright, properly architected, can handle enterprise workloads.',
+    date: '2025',
   },
   {
-    title: 'Operational Leverage in Practice',
-    excerpt: 'Leverage is doing more with the same. Automation that doesn\'t compound isn\'t leverage — it\'s just faster manual work.',
-    date: '2023',
+    title: 'The Art of Agentic AI',
+    excerpt: 'LangChain and LangGraph unlock intelligent decision-making at scale. The key is designing agents that know when to act and when to defer.',
+    date: '2024',
   },
 ]
 
